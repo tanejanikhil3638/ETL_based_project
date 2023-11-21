@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSync Connect</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #81659e;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .option-container {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #81659e;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #6a5177;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #81659e;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .error-message {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            var sourceFile = document.getElementsByName("sourceFile")[0].value;
+            var targetFile = document.getElementsByName("targetFile")[0].value;
+
+            // Check if source and target files are selected
+            if (sourceFile === "" || targetFile === "") {
+                displayErrorMessage("Please upload both source and target CSV files.");
+                return false;
+            }
+
+            // Add more validation as needed
+
+            return true;
+        }
+
+        // Function to add a new column input field
+        function addNewColumn() {
+            var container = document.getElementById("columnContainer");
+            var newInput = document.createElement("div");
+            newInput.className = "option-container";
+            newInput.innerHTML = '<label for="newColumn">Column Name:</label>' +
+                                 '<input type="text" name="textInput" required>' +
+                                 '<button type="button" onclick="removeColumn(this)">-</button>'+
+                                 '<label for="newColumn">Column Name Change:</label>' +
+                                 '<input type="text" name="textInput">' +
+                                 '<label for="newColumn">Append After: </label>' +
+                                 '<input type="text" name="textInput">' +
+                                 '<label for="newColumn">Append Before: </label>' +
+                                 '<input type="text" name="textInput">' +
+                                 '<label for="dropdownOptions">Edit options:</label>'+
+                                 '<select id="dropdownOptions" name="dropdownOptions" multiple>'+
+                                    '<option value="option1">Upper Case</option>'+
+                                    '<option value="option2">Lower Case</option>'+
+                                    '<option value="option3">Capitalise</option>'+
+                                '</select>';
+            container.appendChild(newInput);
+        }
+
+        // Function to remove the clicked column input field
+        function removeColumn(button) {
+            var container = document.getElementById("columnContainer");
+            container.removeChild(button.parentNode);
+        }
+
+        function displayErrorMessage(message) {
+            var errorContainer = document.getElementById("errorContainer");
+            errorContainer.innerHTML = '<p class="error-message">' + message + '</p>';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>DataSync Connect</h1>
+        <p>Welcome to DataSync Connect, your robust solution for seamless data management! Our platform simplifies the complex process of exporting, transforming, and importing data across various databases. Designed with a user-centric approach, our tool ensures efficient data migration while maintaining integrity and coherence. Join us on a journey to streamline your data operations effortlessly.</p>
+    </header>
+
+    <main>
+        <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <label for="sourceFile">Upload Source CSV File:</label>
+            <input type="file" name="sourceFile" accept=".csv" required>
+
+            <label for="targetFile">Upload Target CSV File:</label>
+            <input type="file" name="targetFile" accept=".csv" required>
+
+            <h3>Actions to be implemented</h3>
+
+            <!-- Input box type text -->
+            <div class="option-container" id="columnContainer">
+                <label for="textInput">Column Name:</label>
+                <input type="text" name="textInput" required>
+                <label for="textInput">Column Name Change:</label>
+                <input type="text" name="textInput">
+                <label for="newColumn">Append After: </label>
+                <input type="text" name="textInput">
+                <label for="newColumn">Append Before: </label>
+                <input type="text" name="textInput">
+                <label for="dropdownOptions">Edit options:</label>
+                <select id="dropdownOptions" name="dropdownOptions" multiple>
+                    <option value="option1">Upper Case</option>
+                    <option value="option2">Lower Case</option>
+                    <option value="option3">Capitalise</option>
+                </select>
+            </div>
+
+            <!-- Button to add a new column input field -->
+            <button type="button" onclick="addNewColumn()">+</button>
+            <div id="errorContainer"></div> <!-- Container to display error messages -->
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        © 2023 ETL Tool. All rights reserved.
+    </footer>
+</body>
+</html>
