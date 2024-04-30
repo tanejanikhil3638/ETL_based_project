@@ -17,6 +17,7 @@ This project aims to simplify the process of data transformation for users. By p
 ### Input
 - Users provide input in the form of CSV files.
 - The system accepts CSV files of any size, ensuring flexibility for users.
+- User selects the transform functions.
 
 ### Output
 - The transformed CSV file is generated based on the selected transformations.
@@ -25,20 +26,25 @@ This project aims to simplify the process of data transformation for users. By p
 ## How to Use
 
 1. Clone this repository:
-##
-<tab><tab>git clone https://github.com/tanejanikhil3638/ETL_based_project.git
+```shell
+   git clone https://github.com/tanejanikhil3638/ETL_based_project.git
+```
 
 2. Navigate to the project directory:
-##
-<tab><tab>cd ETL_based_project
+```shell
+   cd ETL_based_project
+```
 
 3. Install dependencies:
-##
-<tab><tab>pip install -r requirements.txt
+```shell
+   pip install -r requirements.txt
+```
 
 4. Run the Flask application:
-##
-<tab><tab>python app.py
+
+```shell
+   python app.py
+```
 
 5. Access the application in your web browser.
 
