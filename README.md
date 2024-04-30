@@ -59,4 +59,4 @@ This project aims to simplify the process of data transformation for users. By p
 ![cc463a56-f5f6-49c1-bd5f-c489ee30606b](https://github.com/tanejanikhil3638/ETL_based_project/assets/98747035/344916eb-653c-45a0-ac5c-5741dd61073b)
 
 
-Feel free to contribute by forking the repository and submitting pull requests.:slightly_smiling_face::slightly_smiling_face:
+Feel free to contribute by forking the repository and submitting pull requests.🙂🙂
