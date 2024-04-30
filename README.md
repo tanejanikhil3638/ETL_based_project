@@ -52,11 +52,15 @@ This project aims to simplify the process of data transformation for users. By p
 
 7. Once the transformation is complete, download the transformed CSV file.
 
-
-
 ## Screenshot of User Interface
 
 ![cc463a56-f5f6-49c1-bd5f-c489ee30606b](https://github.com/tanejanikhil3638/ETL_based_project/assets/98747035/344916eb-653c-45a0-ac5c-5741dd61073b)
 
 
-Feel free to contribute by forking the repository and submitting pull requests.🙂🙂
+
+## Final outcome 
+![8695639b-08da-4119-b616-5b9a0a0e17e8](https://github.com/tanejanikhil3638/Multithreaded-ETL-System/assets/98747035/26a9a5e0-c92f-45d8-93f9-9166e7d18d2d)
+
+
+Feel free to contribute by forking the repository and submittting pull requests.🙂🙂
+
