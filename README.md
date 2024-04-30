@@ -25,12 +25,12 @@ This project aims to simplify the process of data transformation for users. By p
 
 ## How to Use
 
-1. Clone this repository:
+1. Clone this repository:💻
 ```shell
    git clone https://github.com/tanejanikhil3638/ETL_based_project.git
 ```
 
-2. Navigate to the project directory:
+2. Navigate to the project directory: 📁
 ```shell
    cd ETL_based_project
 ```
@@ -40,7 +40,7 @@ This project aims to simplify the process of data transformation for users. By p
    pip install -r requirements.txt
 ```
 
-4. Run the Flask application:
+4. Run the Flask application: 🚀
 
 ```shell
    python app.py
@@ -52,10 +52,11 @@ This project aims to simplify the process of data transformation for users. By p
 
 7. Once the transformation is complete, download the transformed CSV file.
 
-Feel free to contribute by forking the repository and submitting pull requests.
+
 
 ## Screenshot of User Interface
 
 ![cc463a56-f5f6-49c1-bd5f-c489ee30606b](https://github.com/tanejanikhil3638/ETL_based_project/assets/98747035/344916eb-653c-45a0-ac5c-5741dd61073b)
 
 
+Feel free to contribute by forking the repository and submitting pull requests.:slightly_smiling_face::slightly_smiling_face:
